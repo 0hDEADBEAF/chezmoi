@@ -3,9 +3,9 @@
 {{- $signing_key := promptStringOnce . "signing_key" "Signing key" -}}
 {{- $cursor_size := promptIntOnce . "cursor_size" "Cursor size" -}}
 
-
 {
     "data": {
+        "sizes": {{ output "python" "set_sizes.py" }},
         "email": {{ $email | quote }},
         "github_username": {{ $github_username | quote }},
 		"signing_key": {{ $signing_key | quote }},
@@ -15,7 +15,6 @@
 		    "layout": "fr"
 		},
 		"ytb_music_server_port": 26538,
-		"terminal_font_size" : 14.0,
 		"mouse_sensitivity": 0.0,
 		"font_family": "Departure Mono",
 		"colorscheme" : {

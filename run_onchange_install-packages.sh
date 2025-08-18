@@ -48,6 +48,7 @@ yay
 # directx-headers: GPU detection in WSL
 # imagemagick: Image output using sixel or kitty graphics protocol
 # torbrowser-launcher: Privacy at its best
+# wlr-randr: Used to fetch monitors resolution & physical size
 yay -Sy \
     kitty \
     nvim \
@@ -77,7 +78,8 @@ yay -Sy \
 	chafa \
 	ddcutil \
 	imagemagick \
-	torbrowser-launcher
+	torbrowser-launcher \
+	wlr-randr
 
 # Setting default Rust toolchain to stable
 rustup default stable
